@@ -19,7 +19,6 @@ media/
 staticfiles/
 local_settings.py
 
-# DRF (Django REST Framework) - no specific files, but include migrations
 migrations/
 
 # Virtualenv

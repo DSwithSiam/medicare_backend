@@ -11,7 +11,6 @@ from .utils import (
 
 
 
-
 @api_view(["POST"])
 def upload_document(request):
 	uploaded_file = request.FILES.get("file")
