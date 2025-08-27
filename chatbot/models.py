@@ -8,3 +8,15 @@ class MedicalReport(models.Model):
 
     def __str__(self):
         return f"Report for {self.user.email}"
+    
+
+
+class ChatMessage(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='chat_messages')
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.user.email} at {self.timestamp}"
+    
+    
